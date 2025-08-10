@@ -1,8 +1,0 @@
-{
-  "build": {
-    "backend": {
-      "builder": "Python",
-      "path": "backend"
-    }
-  }
-}

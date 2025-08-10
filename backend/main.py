@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model = joblib.load('Irismodel.pkl')
+model = joblib.load('backend/Irismodel.pkl')
 
 class InputData(BaseModel):
     SepalLengthCm: float	
@@ -38,4 +38,5 @@ def predict(data: InputData):
         return {"prediction": label_mapping.get(prediction[0],'Unknown Class')}
     except Exception as e:
         return {"error": str(e)}
+
 # , '"confidence": model.predict_proba(input_data).max()']
